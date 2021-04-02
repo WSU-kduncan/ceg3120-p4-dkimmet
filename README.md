@@ -9,7 +9,7 @@
 
 ## Part 1: Milestone due 4/9
 
-- [ ] Setup public repo via link in Pilot
+- [x] Setup public repo via link in Pilot
 - [ ] Dockerize your website and test locally
   - [ ] https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf
 - [ ] Add site content & Dockerfile to repo
