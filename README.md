@@ -4,7 +4,8 @@
 
 - [x] Create public repo per link in Pilot
 - [x] Clone repo to your working environment (you should not need to use EC2 instances).
-- [ ] Install [Docker for Desktop](https://www.docker.com/products/docker-desktop)
+- [x] Install [Docker for Desktop](https://www.docker.com/products/docker-desktop)
+  - installed through the arch repository (double check that this is the correct version)
 - [ ] Maybe: Install [AWS CLI](https://aws.amazon.com/cli/)
 
 ## Part 1: Milestone due 4/9
