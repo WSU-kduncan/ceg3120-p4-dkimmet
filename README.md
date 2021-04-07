@@ -24,11 +24,9 @@
 - [x] Dockerize your website and test locally
   - [x] Created docker file add the following lines
   ```
-  {
   FROM httpd:2.4
-  #where from are your machine and where to on the container
+  # where from are your machine and where to on the container
   COPY ./html/ /usr/local/apache2/htdocs/
-  }
   ```
   - [x] move to my CEG3120-P4-DKIMMET local folder
   - [x] build docker image `docker build -t httptest .`
