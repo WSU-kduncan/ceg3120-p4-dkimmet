@@ -8,6 +8,10 @@
   - [x] installed through the arch repository (double check that this is the correct version)
   - [x] docker is disabled by default needed to run `sudo systemctl enable docker` and then `sudo systemctl start docker`
   - [x] check status `systemctl status docker`
+  - [x] added my user to docker group with the following commands:
+    - [x] `getent group docker` shows the docker group and group ID
+    - [x] `whoami` double check my user name
+    - [x] `sudo gpasswd -a dayne docker` added user to docker group
 - ~~[ ] Maybe: Install [AWS CLI](https://aws.amazon.com/cli/)~~
 
 ## Part 1: Milestone due 4/9
