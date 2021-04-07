@@ -14,6 +14,10 @@
     - [x] `sudo gpasswd -a dayne docker` added user to docker group
 - ~~[ ] Maybe: Install [AWS CLI](https://aws.amazon.com/cli/)~~
 
+## Resources:
+
+- https://wiki.archlinux.org/index.php/Docker
+
 ## Part 1: Milestone due 4/9
 
 - [x] Setup public repo via link in Pilot
