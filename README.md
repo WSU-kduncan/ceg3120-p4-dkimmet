@@ -1,4 +1,4 @@
-# Readme for Project 4
+# CEG-3120: Project 4
 
 ## Setup:
 
