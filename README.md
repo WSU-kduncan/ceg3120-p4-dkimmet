@@ -21,9 +21,20 @@
 ## Part 1: Milestone due 4/9
 
 - [x] Setup public repo via link in Pilot
-- [ ] Dockerize your website and test locally
-  - [ ] https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf
-- [ ] Add site content & Dockerfile to repo
+- [x] Dockerize your website and test locally
+  - [x] Created docker file add the following lines
+  ```
+  {
+  FROM httpd:2.4
+  #where from are your machine and where to on the container
+  COPY ./html/ /usr/local/apache2/htdocs/
+  }
+  ```
+  - [x] move to my CEG3120-P4-DKIMMET local folder
+  - [x] build docker image `docker build -t httptest .`
+  - [x] run `docker run -dp 80:80 httptest`
+  - [x] test by going to [docker test website](http://127.0.0.1/)
+- [x] Add site content & Dockerfile to repo
 
 ---
 
@@ -56,3 +67,7 @@
 In your GitHub repository, select the green `Code` button then select `Download ZIP`. Upload this zip file to Pilot.
 
 In the `Comment` area in the Pilot Dropbox, copy URL / link to the repository corresponding to the project you are submitting
+
+```
+
+```
