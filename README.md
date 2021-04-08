@@ -30,8 +30,9 @@
   ```
   - [x] move to my CEG3120-P4-DKIMMET local folder
   - [x] build docker image `docker build -t httptest .`
-  - [x] run `docker run -dit --name httptest -p 80:80 httptest`
+  - [x] run `docker run -dit --name httptest -p 80:80 httptest` creates a repository called httptest
   - [x] test by going to [docker test website](http://127.0.0.1/)
+  - [x] to stop docker `docker kill id`
 - [x] Add site content & Dockerfile to repo
 
 ## Resources:
