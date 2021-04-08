@@ -34,6 +34,11 @@
   - [x] test by going to [docker test website](http://127.0.0.1/)
 - [x] Add site content & Dockerfile to repo
 
+## Resources:
+
+- https://hub.docker.com/_/httpd
+- https://docs.docker.com/engine/reference/run/
+
 ---
 
 ---
