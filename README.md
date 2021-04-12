@@ -5,13 +5,13 @@
 - [x] Create public repo per link in Pilot
 - [x] Clone repo to your working environment (you should not need to use EC2 instances).
 - [x] Install [Docker for Desktop](https://www.docker.com/products/docker-desktop)
-  - [x] installed through the arch repository (double check that this is the correct version)
-  - [x] docker is disabled by default needed to run `sudo systemctl enable docker` and then `sudo systemctl start docker`
-  - [x] check status `systemctl status docker`
-  - [x] added my user to docker group with the following commands:
-    - [x] `getent group docker` shows the docker group and group ID
-    - [x] `whoami` double check my user name
-    - [x] `sudo gpasswd -a dayne docker` added user to docker group
+  - installed through the arch repository (double check that this is the correct version)
+  - docker is disabled by default needed to run `sudo systemctl enable docker` and then `sudo systemctl start docker`
+  - check status `systemctl status docker`
+  - added my user to docker group with the following commands:
+    - `getent group docker` shows the docker group and group ID
+    - `whoami` double check my user name
+    - `sudo gpasswd -a dayne docker` added user to docker group
 - ~~[ ] Maybe: Install [AWS CLI](https://aws.amazon.com/cli/)~~
 
 ## Resources:
@@ -22,18 +22,18 @@
 
 - [x] Setup public repo via link in Pilot
 - [x] Dockerize your website and test locally
-  - [x] Created docker file add the following lines
+  - Created docker file add the following lines
   ```
   FROM httpd:2.4
   # where from are your machine and where to on the container
   COPY ./html/ /usr/local/apache2/htdocs/
   ```
-  - [x] move to my CEG3120-P4-DKIMMET local folder
-  - [x] build docker image `docker build -t httptest .`
-  - [x] run `docker run -dit --name httptest -p 80:80 httptest` creates a repository called httptest
-  - [x] test by going to [docker test website](http://127.0.0.1/)
-  - [x] to stop docker `docker kill id`
-  - [x] start again `docker start httptest`
+  - move to my CEG3120-P4-DKIMMET local folder
+  - build docker image `docker build -t httptest .`
+  - run `docker run -dit --name httptest -p 80:80 httptest` creates a repository called httptest
+  - test by going to [docker test website](http://127.0.0.1/)
+  - to stop docker `docker kill id`
+  - start again `docker start httptest`
 - [x] Add site content & Dockerfile to repo
 
 ## Resources:
