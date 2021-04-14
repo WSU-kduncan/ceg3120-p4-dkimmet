@@ -12,7 +12,7 @@
     - `getent group docker` shows the docker group and group ID
     - `whoami` double check my user name
     - `sudo gpasswd -a dayne docker` added user to docker group
-- ~~[ ] Maybe: Install [AWS CLI](https://aws.amazon.com/cli/)~~
+- [x] Maybe: Install [AWS CLI](https://aws.amazon.com/cli/)
 
 ## Resources:
 
