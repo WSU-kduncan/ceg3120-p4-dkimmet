@@ -45,12 +45,11 @@
 
 ## Part 2: GitHub Actions & ECR - Milestone due 4/17
 
-- [ ] Set up ECR on AWS educate account
+~~- [ ] Set up ECR on AWS educate account~~
+
 - [x] Create GitHub Actions secrets named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to store the values for your Amazon IAM access key
 - [x] Set up GitHub workflow that pushes image to ECR, comment out ECS related sections
-
   - Using workflow templated here: https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service
-
 - [x] Instructions to configure AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
   - You will need AWS CLI so that you can interact with an account that _can_ use ECR and ECS (I disabled your ability to log into the web interface using these credentials)
   - Credential notes are located in Pilot -> Content -> Projects
