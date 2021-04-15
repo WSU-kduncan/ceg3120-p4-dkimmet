@@ -48,14 +48,15 @@
 - [ ] Set up ECR on AWS educate account
 - [ ] Create GitHub Actions secrets named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to store the values for your Amazon IAM access key
 - [ ] Set up GitHub workflow that pushes image to ECR, comment out ECS related sections
+
   - Using workflow templated here: https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service
-- [ ] Optional: install AWS CLI and play with using commands to play with your AWS account
-  - Instructions to configure AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
-    - You can't make an IAM user, so you'll need to pull up yours, see below
-  - How to get IAM user credentials
-    - Sign in to AWS Educate, click our classroom - don't click AWS Console
-    - Click other blue button for account details. In here, you'll find the credentials for AWS CLI
-  - Guide update incoming
+
+- [x] Instructions to configure AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+  - You will need AWS CLI so that you can interact with an account that _can_ use ECR and ECS (I disabled your ability to log into the web interface using these credentials)
+  - Credential notes are located in Pilot -> Content -> Projects
+  - Create ECR Repository from CLI:
+    - Replace `w###aaa` with your w# so we can tell things apart
+    - `aws ecr create-repository --repository-name ceg3120/w###aaa --region us-east-1`
 
 ## Part 3: Milestone due 4/23
 
