@@ -46,8 +46,8 @@
 ## Part 2: GitHub Actions & ECR - Milestone due 4/17
 
 - [ ] Set up ECR on AWS educate account
-- [ ] Create GitHub Actions secrets named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to store the values for your Amazon IAM access key
-- [ ] Set up GitHub workflow that pushes image to ECR, comment out ECS related sections
+- [x] Create GitHub Actions secrets named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to store the values for your Amazon IAM access key
+- [x] Set up GitHub workflow that pushes image to ECR, comment out ECS related sections
 
   - Using workflow templated here: https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service
 
