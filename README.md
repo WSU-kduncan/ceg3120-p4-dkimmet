@@ -55,18 +55,39 @@
 - [x] Set up GitHub workflow that pushes image to ECR, comment out ECS related sections
   - Using workflow templated here: https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service
 
-## Part 3: Milestone due 4/23
+## Part 3: Documentation - Milestone due 4/23
 
-- If success, get AWS AMI credentials (GitHub Secrets), upload container to ECR
-- Update ECS to use new container
-- TODO: Add milestone deliverables
+- Create `README.md` in main folder of your repo that details the following:
+  - Project Overview
+  - Run Project Locally
+    - how you installed docker + dependencies (WSL2, for example)
+    - how to build the container
+    - how to run the container
+    - how to view the project (open a browser...go to ip and port...)
+  - Configure AWS CLI
+    - need AWS IAM user with admin credentials
+    - how you installed
+    - how to configure
+  - Create ECR
+    - command to create
+  - Configure GitHub Secrets
+    - need AWS IAM user with admin credentials
+    - set secrets and secret names
+  - Configure GitHub Workflow
+    - variables to change (AWS_REGION, etc.)
 
-## Extra Credit:
+## Extra Credit - Docker Pull
 
-- Dockerize your python bot
-  - Will require use of GitHub Secrets to protect the API key
-  - This guide has a parallel example with some things to consider
-    - https://aws.amazon.com/blogs/containers/create-a-ci-cd-pipeline-for-amazon-ecs-with-github-actions-and-aws-codebuild-tests/
+- https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html
+- https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-pull-ecr-image.html
+- Pull image, run locally
+
+## Extra Credit - [Docke]Rise of the Discord Bot
+
+- Dockerize your python bot - place in repo in folder named `Discord-Bot`
+  - Add instructions to handle API key from Discord. Maybe have a docker copy that gets a .env file from their path (this need to exist to build and run image)
+  - Your API key may be the most challenging piece of this project extra credit. GitHub secrets might be handy.
+  - Be sure to site your sources if you model off of an example / other documentation
 
 ## Submission
 
@@ -74,6 +95,42 @@ In your GitHub repository, select the green `Code` button then select `Download 
 
 In the `Comment` area in the Pilot Dropbox, copy URL / link to the repository corresponding to the project you are submitting
 
-```
+## Documenting Rabbit Holes
 
-```
+This section is notes on what has needed to be modified over the course of this project.
+
+- Cannot authenticate on AWS CLI with EDU account credentials - You can't make an IAM user, so you'll need to pull up yours, see below
+  - How to get IAM user credentials
+    - Sign in to AWS Educate, click our classroom - don't click AWS Console
+    - Click other blue button for account details. In here, you'll find the credentials for AWS CLI
+  - Guide update incoming
+- Verify services are actually available before using again:
+
+  - https://awseducate-starter-account-services.s3.amazonaws.com/AWS_Educate_Starter_Account_Services_Supported.pdf
+
+- Using this as resource created below: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-ec2.html
+- ~~Create EC2 Key Pair~~ - if using EC2 Deployment
+  - Remember, you're on my AWS, so you'll need this key for a future step - specifically remember the key-name value
+  - `aws ec2 create-key-pair --key-name w###aaa --query 'KeyMaterial' --output text > aws-w###aaa.pem`
+  - Change permssions: `chmod 400 aws-w###aaa.pem`
+- ~~Create ECS cluster~~ - if using EC2 Deployment
+
+  - `ecs-cli configure --cluster cluster-w###aaa --default-launch-type EC2 --config-name cluster-w###aaa --region us-east-1`
+  - `ecs-cli up --keypair w###aaa --capability-iam --size 2 --instance-type t2.small --cluster-config cluster-w###aaa`
+    - If you mess up and need to re-run, add `--force` at the end of the command to have it replace the old with the new
+  - What about security groups and ports?
+    - By default, the security group created for your container instances opens port 80 for inbound traffic
+    - Convenient, moving on. If this was not the case, would need `--security-group` parameter and set additional options
+
+- Install ECS CLI Tools (this is in addition to AWS CLI)
+  - [Link to install guide](https://docs.amazonaws.cn/en_us/AmazonECS/latest/developerguide/ECS_CLI_installation.html)
+  - Linux commands:
+    - `sudo curl -Lo /usr/local/bin/ecs-cli https://s3.cn-north-1.amazonaws.com.cn/amazon-ecs-cli/ecs-cli-linux-amd64-latest`
+    - `sudo chmod +x /usr/local/bin/ecs-cli`
+- Create ECS cluster
+  - `ecs-cli configure --cluster ecs-w###aaa --default-launch-type FARGATE --config-name ecs-w###aaa --region us-east-1`
+  - `ecs-cli up --cluster-config ecs-w###aaa`
+- Create ECS service
+- Create ECS Task Definition
+- Modify workflow to use GitHub Actions to auto deploy
+- In your workflow, `ECS_CLUSTER` = ecs-w###aaa per what you created above
