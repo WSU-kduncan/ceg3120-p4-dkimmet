@@ -14,7 +14,7 @@ Although this final project seems complicated, it is easily broken down into the
 
 ## Run Project Locally
 
-- Install Docker
+- **Installed Docker**
   - Installed through the arch repository
     - docker is disabled by default needed to run `sudo systemctl enable docker` and then `sudo systemctl start docker`
     - check status `systemctl status docker`
