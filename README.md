@@ -8,9 +8,10 @@ Although this final project seems complicated, it is easily broken down into the
 - In combination with Amazon's ECR service and GitHub actions, we set up a workflow that pushed GitHub releases automatically to ECR.
 
 **Tools Used:**
-  - Used aws cli to interact with ECR
-  - GitHub Repository secrets
-  - Yaml configuration file
+
+- Used aws cli to interact with ECR
+- GitHub Repository secrets
+- Yaml configuration file
 
 ## Run Project Locally
 
@@ -70,9 +71,3 @@ Although this final project seems complicated, it is easily broken down into the
 - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 - https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service
 - https://docs.docker.com/engine/reference/commandline/pull/
-
-## Submission
-
-In your GitHub repository, select the green `Code` button then select `Download ZIP`. Upload this zip file to Pilot.
-
-In the `Comment` area in the Pilot Dropbox, copy URL / link to the repository corresponding to the project you are submitting
