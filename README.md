@@ -22,7 +22,7 @@ Although this final project seems complicated, it is easily broken down into the
       - `getent group docker` shows the docker group and group ID
       - `whoami` double check my user name
       - `sudo gpasswd -a dayne docker` added user to docker group
-- Dockerized website and test locally
+- **Dockerized website and test locally**
   - Created docker file add the following lines
   -      FROM httpd:2.4
          # where from are your machine and where to on the container
@@ -33,19 +33,19 @@ Although this final project seems complicated, it is easily broken down into the
   - test by going to [docker test website](http://127.0.0.1/)
   - to stop docker `docker kill id`
   - start again `docker start httptest`
-- Configure AWS CLI
+- **Configure AWS CLI**
   - Install cli version 2 by running the following commands
     -     curl "https://awscli.amazonaws.com awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
             unzip awscliv2.zip
             sudo ./aws/install
   - AWS IAM user with admin credentials
   - Use `aws configure` to enter the information needed that was provided to us on Pilot
-- Create ECR
+- **Create ECR**
   - used the following command `aws ecr create-repository --repository-name ceg3120/myWSUID --region us-east-1`
-- Configure GitHub Secrets
+- **Configure GitHub Secrets**
   - In the repositories settings Click on 'Secrets' and then click on the button 'New repository secret'
   - Add secrets named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY and used the information off of Pilot to fill in the 'Value'
-- Configure GitHub Workflow
+- **Configure GitHub Workflow**
   - Created a new folder .github with a folder inside it called workflows.
   - Then created a docker-to-ecr-to-ecs.yml located inside the newly created workflows folder
     - changed the following variables from the ceg3120-p4-pattonsgirl template:
