@@ -2,10 +2,10 @@
 
 ## Project Overview
 
-Although this final project seems to be complicated it is easily broken down into the following major steps.
+Although this final project seems complicated, it is easily broken down into the following significant steps.
 
-- We used are website build from Project 3 and "Dockerized" it and tested it locally
-- In combination with Amazons ECR service and GitHub actions we setup a workflow that pushed GitHub releases automatically to ECR.
+- We used the website build from Project 3 and "Dockerized" it and tested it locally
+- In combination with Amazon's ECR service and GitHub actions, we set up a workflow that pushed GitHub releases automatically to ECR.
   **Tools Used:**
   - Used aws cli to interact with ECR
   - GitHub Repository secrets
